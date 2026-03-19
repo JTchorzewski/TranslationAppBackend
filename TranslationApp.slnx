@@ -1,0 +1,14 @@
+<Solution>
+  <Folder Name="/TranslationApp_API/">
+    <Project Path="TranslationApp/TranslationApp.csproj" />
+  </Folder>
+  <Folder Name="/TranslationApp_Application/">
+    <Project Path="TranslationApp_Application/TranslationApp_Application.csproj" />
+  </Folder>
+  <Folder Name="/TranslationApp_Domain/">
+    <Project Path="TranslationApp_Domain/TranslationApp_Domain.csproj" />
+  </Folder>
+  <Folder Name="/TranslationApp_Infrastructure/">
+    <Project Path="TranslationApp_Infrastructure/TranslationApp_Infrastructure.csproj" />
+  </Folder>
+</Solution>
