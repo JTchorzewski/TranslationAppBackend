@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TranslationApp_Application.DTO
 {
-    public class TranslationResultDto
+    public class ProviderTranslationResultDto
     {
         public string? TranslatedText { get; set; }
         public bool IsSuccess { get; set; }

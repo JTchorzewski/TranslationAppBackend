@@ -7,7 +7,7 @@ using TranslationApp_Application.InterfaceService;
 
 namespace TranslationApp_Application.Service
 {
-    public class FunTranslationService : ITranslationService
+    public class FunTranslationService : ITranslationProviderService
     {
         private readonly HttpClient _httpClient;
 
@@ -18,9 +18,9 @@ namespace TranslationApp_Application.Service
             _httpClient.BaseAddress = new Uri("https://api.funtranslations.com/translate/");
         }
 
-        public async Task<TranslationResultDto> TranslateAsync(string text, string translator)
+        public async Task<ProviderTranslationResultDto> TranslateAsync(string text, string translator)
         {
-            var result = new TranslationResultDto();
+            var result = new ProviderTranslationResultDto();
 
             try
             {

@@ -5,8 +5,8 @@ using TranslationApp_Application.DTO;
 
 namespace TranslationApp_Application.InterfaceService
 {
-    public interface ITranslationService
+    public interface ITranslationProviderService
     {
-        Task<TranslationResponseDto> TranslateTextAsync(TranslationRequestDto request);
+        Task<ProviderTranslationResultDto> TranslateAsync(string text, string translator);
     }
 }

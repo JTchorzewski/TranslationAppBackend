@@ -5,7 +5,7 @@ using System.Text;
 
 namespace TranslationApp_Application.DTO
 {
-    public class TanslationRequestDto
+    public class TranslationRequestDto
     {
         [Required(ErrorMessage = "Text is required.")]
         [StringLength(500, MinimumLength = 1, ErrorMessage = "Text must be between 1 and 500 characters.")]

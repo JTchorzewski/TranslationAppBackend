@@ -11,7 +11,7 @@ namespace TranslationApp_Application
     {
         public static IServiceCollection AddApplication(this IServiceCollection services)
         {
-            services.AddTransient<ITranslationService, FunTranslationService>();
+            services.AddTransient<ITranslationProviderService, FunTranslationService>();
             return services;
         }
     }
