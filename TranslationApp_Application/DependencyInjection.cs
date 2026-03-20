@@ -11,7 +11,15 @@ namespace TranslationApp_Application
     {
         public static IServiceCollection AddApplication(this IServiceCollection services)
         {
-            services.AddTransient<ITranslationProviderService, FunTranslationService>();
+            services.AddHttpClient<ITranslationProviderService, FunTranslationService>(client =>
+            {
+                client.BaseAddress = new Uri("https://api.funtranslations.com/translate/");
+                client.Timeout = TimeSpan.FromSeconds(10);
+                client.DefaultRequestHeaders.Add("User-Agent", "MyTranslationApp/1.0");
+            });
+            services.AddScoped<ITranslationService, TranslationService>();
+            services.AddScoped<ILogService, LogService>();
+
             return services;
         }
     }

@@ -1,4 +1,7 @@
 <Solution>
+  <Folder Name="/Test/">
+    <Project Path="TranslationApp_Test/TranslationApp_Test.csproj" Id="b459a6da-b38d-4f4d-ae97-2362d7e35365" />
+  </Folder>
   <Folder Name="/TranslationApp_API/">
     <Project Path="TranslationApp/TranslationApp.csproj" />
   </Folder>
