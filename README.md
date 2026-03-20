@@ -51,7 +51,7 @@ Create a new class in the TranslationApp_Infrastructure/Providers folder (e.g., 
 
 Implement the existing ITranslationProvider interface:
 
-C#
+```csharp
 public class LibreTranslateProvider : ITranslationProvider
 {
     public async Task<ProviderTranslationResult> TranslateAsync(string text, string translator)
@@ -59,9 +59,11 @@ public class LibreTranslateProvider : ITranslationProvider
         // Implementation for the new API
     }
 }
+```
 Update the Dependency Injection container in TranslationApp_Application/DependencyInjection.cs to use the new provider:
 
-C#
+```csharp
 // Swap FunTranslationService with LibreTranslateProvider
 services.AddHttpClient<ITranslationProvider, LibreTranslateProvider>();
+```
 No changes are required in the TranslationService or TranslationController!
